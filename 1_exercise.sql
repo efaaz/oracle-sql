@@ -9,6 +9,19 @@ FROM EMP
 WHERE DEPTNO = 30
 
 -- 3. Include the location of department 30 in the output.
--- 4. Write a query to display the employee name, employee no of all employees who earn a
--- commission.
+
+SELECT DEPTNO, LOC
+FROM DEPT
+WHERE DEPTNO = 30;
+
+-- 4. Write a query to display the employee name, employee no of all employees who earn a commission.
+
+SELECT ENAME, EMPNO, COMM
+FROM EMP
+WHERE COMM IS NOT NULL;
+
 -- 5. Display the employee name and department no for all employees who have an A in their name.
+
+SELECT ENAME, DEPTNO
+FROM EMP
+WHERE ENAME LIKE '%A%';
